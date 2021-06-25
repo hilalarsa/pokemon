@@ -1,0 +1,235 @@
+<mxfile>
+    <diagram name="Page-1" id="f1b7ffb7-ca1e-a977-7cf5-a751b3c06c05">
+        <mxGraphModel dx="2565" dy="1682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="59" value="Pokedex" style="text;spacingTop=-5;fontSize=18;fontStyle=0" parent="1" vertex="1">
+                    <mxGeometry x="923.54" y="20" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="" style="line;strokeWidth=1" parent="1" vertex="1">
+                    <mxGeometry x="870" y="55" width="780" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="line;strokeWidth=1" parent="1" vertex="1">
+                    <mxGeometry x="870" width="780" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="My Pokemon List" style="text;spacingTop=-5;" parent="1" vertex="1">
+                    <mxGeometry x="1535" y="25.000000000000128" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="1" vertex="1">
+                    <mxGeometry x="870" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="Logo" style="text;spacingTop=-5;align=center" parent="1" vertex="1">
+                    <mxGeometry x="870" y="15" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="1098" y="190" width="281.66" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="123" vertex="1">
+                    <mxGeometry x="1.2851307972234202e-13" y="12.7136231884058" width="281.6599999999999" height="238.33333333333331" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="123" vertex="1">
+                    <mxGeometry width="281.6599999999999" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="858.54" y="500" width="274.6" height="146.45" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="Pokemon details&#10;&#10;lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum" style="text;spacingTop=-5;whiteSpace=wrap;align=left;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1290" y="500" width="240" height="146.45" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="Attribute&#10;Damage&#10;Atk&#10;Str&#10;Int&#10;Agi" style="text;spacingTop=-5;whiteSpace=wrap;align=left;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="858.54" y="784.45" width="360" height="146.45" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="Pokemon Name" style="text;spacingTop=-5;whiteSpace=wrap;align=left;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1075.4" y="100" width="360" height="146.45" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="20" y="5" width="795.53" height="1145" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Pokedex" style="text;spacingTop=-5;fontSize=18;fontStyle=0" parent="129" vertex="1">
+                    <mxGeometry x="92.18588495664754" y="34.43609022556391" width="396.0170627573577" height="34.43609022556391" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="line;strokeWidth=1" parent="129" vertex="1">
+                    <mxGeometry y="94.69924812030075" width="757.5978591879887" height="17.218045112781954" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1" parent="129" vertex="1">
+                    <mxGeometry width="774.8159923513521" height="17.218045112781954" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="My Pokemon List" style="text;spacingTop=-5;" parent="129" vertex="1">
+                    <mxGeometry x="585.4165275543548" y="51.65413533834608" width="51.654399490090135" height="34.43609022556391" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="129" vertex="1">
+                    <mxGeometry y="17.218045112781954" width="68.87253265345352" height="68.87218045112782" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Logo" style="text;spacingTop=-5;align=center" parent="129" vertex="1">
+                    <mxGeometry y="25.827067669172934" width="68.87253265345352" height="68.87218045112782" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-122" value="Scroll to Load More " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=20;" parent="129" vertex="1">
+                    <mxGeometry x="224.19731192015456" y="1093.345864661654" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-72" value="" style="group" parent="129" vertex="1" connectable="0">
+                    <mxGeometry y="198.00751879699249" width="775.53" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry width="247.50957446808508" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Pokemon Name" style="text;spacingTop=-5;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry width="49.50191489361701" height="33.00125313283208" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry y="231.00877192982458" width="247.50957446808508" height="132.00501253132833" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="16.50063829787234" y="33.00125313283208" width="214.50829787234042" height="181.50689223057645" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="16.50063829787234" y="16.50062656641604" width="214.50829787234042" height="198.00751879699249" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.misc.rating;strokeColor=#999999;fillColor=#ffff00;emptyFillColor=#ffffff;grade=4;ratingScale=5;ratingStyle=star;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="4.125159574468178" y="363.0137844611533" width="127.87994680851062" height="16.50062656641604" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-61" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="264.0102127659574" width="247.50957446808508" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-62" value="Pokemon Name" style="text;spacingTop=-5;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="264.0102127659574" width="49.50191489361701" height="33.00125313283208" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-63" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="264.0102127659574" y="231.00877192982458" width="247.50957446808508" height="132.00501253132833" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-64" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="280.51085106382976" y="33.00125313283208" width="214.50829787234042" height="181.50689223057645" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-65" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="280.51085106382976" y="16.50062656641604" width="214.50829787234042" height="198.00751879699249" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-66" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="528.0204255319148" width="247.50957446808508" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-67" value="Pokemon Name" style="text;spacingTop=-5;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="528.0204255319148" width="49.50191489361701" height="33.00125313283208" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-68" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="528.0204255319148" y="231.00877192982458" width="247.50957446808508" height="132.00501253132833" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-69" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="544.5210638297872" y="33.00125313283208" width="214.50829787234042" height="181.50689223057645" as="geometry"/>
+                </mxCell>
+                <mxCell id="DVHssBdKQrAlOiTk1IPa-70" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="DVHssBdKQrAlOiTk1IPa-72" vertex="1">
+                    <mxGeometry x="544.5210638297872" y="16.50062656641604" width="214.50829787234042" height="198.00751879699249" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="" style="group" parent="129" vertex="1" connectable="0">
+                    <mxGeometry y="634.9975187969925" width="775.53" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="130" vertex="1">
+                    <mxGeometry width="247.50957446808508" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="Pokemon Name" style="text;spacingTop=-5;" parent="130" vertex="1">
+                    <mxGeometry width="49.50191489361701" height="33.00125313283208" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left" parent="130" vertex="1">
+                    <mxGeometry y="231.00877192982458" width="247.50957446808508" height="132.00501253132833" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="130" vertex="1">
+                    <mxGeometry x="16.50063829787234" y="33.00125313283208" width="214.50829787234042" height="181.50689223057645" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="130" vertex="1">
+                    <mxGeometry x="16.50063829787234" y="16.50062656641604" width="214.50829787234042" height="198.00751879699249" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.misc.rating;strokeColor=#999999;fillColor=#ffff00;emptyFillColor=#ffffff;grade=4;ratingScale=5;ratingStyle=star;" parent="130" vertex="1">
+                    <mxGeometry x="4.125159574468178" y="363.0137844611533" width="127.87994680851062" height="16.50062656641604" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="130" vertex="1">
+                    <mxGeometry x="264.0102127659574" width="247.50957446808508" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="Pokemon Name" style="text;spacingTop=-5;" parent="130" vertex="1">
+                    <mxGeometry x="264.0102127659574" width="49.50191489361701" height="33.00125313283208" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left" parent="130" vertex="1">
+                    <mxGeometry x="264.0102127659574" y="231.00877192982458" width="247.50957446808508" height="132.00501253132833" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="130" vertex="1">
+                    <mxGeometry x="280.51085106382976" y="33.00125313283208" width="214.50829787234042" height="181.50689223057645" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="130" vertex="1">
+                    <mxGeometry x="280.51085106382976" y="16.50062656641604" width="214.50829787234042" height="198.00751879699249" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="130" vertex="1">
+                    <mxGeometry x="528.0204255319148" width="247.50957446808508" height="396.01503759398497" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="Pokemon Name" style="text;spacingTop=-5;" parent="130" vertex="1">
+                    <mxGeometry x="528.0204255319148" width="49.50191489361701" height="33.00125313283208" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="Pokemon Info&#10;Name&#10;Type&#10;Power&#10;OWNED : 2" style="text;spacingTop=-5;whiteSpace=wrap;align=left" parent="130" vertex="1">
+                    <mxGeometry x="528.0204255319148" y="231.00877192982458" width="247.50957446808508" height="132.00501253132833" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="130" vertex="1">
+                    <mxGeometry x="544.5210638297872" y="33.00125313283208" width="214.50829787234042" height="181.50689223057645" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="130" vertex="1">
+                    <mxGeometry x="544.5210638297872" y="16.50062656641604" width="214.50829787234042" height="198.00751879699249" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="&lt;font style=&quot;font-size: 40px&quot;&gt;Catch&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1025.6" y="980" width="426.46" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Probability 50%&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1165" y="1070" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="&lt;span style=&quot;font-size: 40px&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1025.6" y="1260" width="426.46" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="&lt;span style=&quot;font-size: 40px&quot;&gt;Keep&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="1600" width="170" height="82.74" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="&lt;span style=&quot;font-size: 40px&quot;&gt;Release&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="1600" width="170" height="82.74" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="Charmander was caught!" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="1530" width="420" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="1098" y="1270" width="281.66" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="154" vertex="1">
+                    <mxGeometry x="1.2851307972234202e-13" y="12.7136231884058" width="281.6599999999999" height="238.33333333333331" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="154" vertex="1">
+                    <mxGeometry width="281.6599999999999" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="&lt;span style=&quot;font-size: 40px&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1026" y="1740" width="426.46" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="159" value="&lt;span style=&quot;font-size: 40px&quot;&gt;Back&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="2080" width="280" height="82.74" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="Pokemon got away!" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1075.4" y="2010" width="330" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="1098.4" y="1750" width="281.66" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="" style="verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.iconGrid;strokeColor=#CCCCCC;gridSize=1,1;" parent="161" vertex="1">
+                    <mxGeometry x="1.2851307972234202e-13" y="12.7136231884058" width="281.6599999999999" height="238.33333333333331" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="Article&#10;Picture" style="text;spacingTop=-5;align=center;verticalAlign=middle;fontSize=20;fontColor=#CCCCCC" parent="161" vertex="1">
+                    <mxGeometry width="281.6599999999999" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="&lt;span style=&quot;font-size: 40px&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="1260" width="426.46" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="Catching Pokemon" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1535" y="1360" width="320" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="Using Pokeball" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1563.23" y="1420" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="174" value="Using Masterball" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1555" y="1480" width="280" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="175" value="Using Masterball" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="1553.23" y="1540" width="280" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

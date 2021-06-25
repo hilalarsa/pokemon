@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Component List
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## TODO
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Home / List Page
+Show pokemon list
+- Pagination / Infinite scroll
+- Fetch from API
+- Show total owned on each pokemon
+- Save on localstorage
+Pokemon detail page on click
+- Router redirect
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Detail page
+Show : picture, moves, type, additional info
+Button : catch pokemon (random 50% probability)
+Give nickname to pokemon
+Save Pokemon data to localstorage
+Add validation on nickname so its unique
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# My Pokemon list page
+Show data from localstorage 
+Show list of pokemon, owned only
+Show this as list, with all owned pokemon with nickname showed
+Remove/release pokemon from owned if they're useless (lol)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Additional details
+Use Graphql with Apollo
+Check lighthouse report
+Deploy on static server
 
-## Learn More
+# Design plan
+Use mobile first UI/UX
 
-To learn more about Next.js, take a look at the following resources:
+# Stack
+React NextJS, Custom Hook, React Context
+Graphql Apollo Client
+CSS in JS Emotion
+Automated test (Integration test & Unit test) with JEST and React testing library
+Webpack
+AMP, PWA, SPA, SSR
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sprint plan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Day 1
+All page layouting with dummy data
 
-## Deploy on Vercel
+# Day 2
+All page layouting with real data
+Apollo integration
+Fetch API from gql
+Start on storage logic
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Day 3
+Local storage logic on :
+- Catching pokemon
+- Retrieve Pokemon on my list
+- Release pokemon
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Day 4
+Design improvement
+Fix css and logics
+Start on writing test cases
+Initial Deploy
+
+# Day 5
+Write test
+Improve UI
+
+# Day 6
+Double check logic
+
+# Day 7
+Double check deployment and submit
