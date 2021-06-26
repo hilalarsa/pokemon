@@ -1,0 +1,53 @@
+import { gql } from '@apollo/client'
+
+const GET_POKEMONS_BY_ID = gql`
+    query Query($pokemonName: String!) {
+        pokemon(name: $pokemonName) {
+            id
+            name
+            weight
+            height
+            base_experience
+            location_area_encounters
+            sprites {
+                front_default
+            }
+            species {
+                name
+            }
+            types {
+                slot
+                type {
+                    name
+                }
+            }
+            abilities {
+                is_hidden
+                ability {
+                    name
+                }
+            }
+            stats {
+                effort
+                base_stat
+                stat {
+                    name
+                }
+            }
+        }
+    }
+`
+
+const GET_POKEMONS = gql`
+    query Query($limit: Int, $offset: Int) {
+        pokemons(limit: $limit, offset: $offset) {
+            results {
+                id
+                name
+                image
+            }
+        }
+    }
+`
+
+export { GET_POKEMONS, GET_POKEMONS_BY_ID }

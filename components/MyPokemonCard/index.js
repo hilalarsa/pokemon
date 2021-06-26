@@ -1,32 +1,32 @@
-import Link from 'next/link'
-
-const PokemonCard = ({ data }) => {
+const MyPokemonCard = ({ data }) => {
     console.log(data)
     return (
         <>
-            <Link
-                href={{
-                    pathname: '/pokemon/[slug]',
-                    query: { slug: data.name },
-                }}
-            >
-                <div className="card-container">
-                    <div className="pokemon-image-container">
-                        <img src={data.image} className="pokemon-image" />
-                    </div>
-                    <div className="">
-                        <div className="pokemon-name">{data.name}</div>
-                    </div>
+            <div className="card-container">
+                {/* <div className="pokemon-image-container">
+                    <img src={data.image} className="pokemon-image" />
+                </div> */}
+                <div className="">
+                    <div className="pokemon-name">{data.pokemonName}</div>
                 </div>
-            </Link>
+                <div>Owned: </div>
+                <div>
+                    {data.owned.map((own) => {
+                        return (
+                            <>
+                                <div>Nickname: {own.nickname}</div>
+                                <div>Caught on: {own.dateCaught}</div>
+                            </>
+                        )
+                    })}
+                </div>
+            </div>
             <style jsx>
                 {`
                     .card-container {
                         cursor: pointer;
                         margin: 8px;
-                        width: 100px;
-                        height: 125px;
-                        background: #FFFFFF;
+                        background: #ffffff;
                         border-radius: 2px;
                         border: 8px solid #9494a4;
                         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -97,4 +97,4 @@ const PokemonCard = ({ data }) => {
     )
 }
 
-export default PokemonCard
+export default MyPokemonCard

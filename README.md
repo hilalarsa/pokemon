@@ -33,6 +33,11 @@ Deploy on static server
 
 # Design plan
 Use mobile first UI/UX
+Collor pallete : 
+f94144
+f3722c
+f8961e
+f9844a
 
 # Stack
 React NextJS, Custom Hook, React Context
@@ -54,11 +59,13 @@ Fetch API from gql
 Start on storage logic
 
 # Day 3
+All page layouting with real data
+Add basic css for components
 Local storage logic on :
 - Catching pokemon
 - Retrieve Pokemon on my list
 - Release pokemon
-
+Work on my pokemon list
 
 # Day 4
 Design improvement
@@ -69,9 +76,13 @@ Initial Deploy
 # Day 5
 Write test
 Improve UI
+Add animation
 
 # Day 6
-Double check logic
+Write more test
+Improve UI
+Clean code
 
 # Day 7
+Clean code
 Double check deployment and submit

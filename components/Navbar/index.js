@@ -1,22 +1,22 @@
 import { jsx, css } from '@emotion/react'
+import { useRouter } from 'next/router'
+import Button from '../Button'
 
 const Navbar = () => {
+    const router = useRouter()
+    const handleRedirect = (href) => {
+        router.push(href)
+    }
     return (
         <>
             <div className="navbar-container">
-                <div>
-                    <a href="/" target="#">
-                        <img
-                            src="/pokemon-logo.png"
-                            width="75px"
-                            height="100%"
-                        />
-                    </a>
+                <div onClick={() => handleRedirect('/')}>
+                    <img src="/pokemon-logo.png" width="75px" height="100%" />
                 </div>
-                <div>
-                    <a href="/" target="#">
+                <div className="pixeltext">
+                    <Button handleClick={() => handleRedirect('/my-pokemon')}>
                         My Pokemon
-                    </a>
+                    </Button>
                 </div>
             </div>
             <style jsx>
@@ -29,6 +29,7 @@ const Navbar = () => {
                         background-color: #ffde00;
                         color: white;
                         overflow: hidden;
+                        box-shadow: 0px 15px 20px #3b4cca;
                     }
                 `}
             </style>
