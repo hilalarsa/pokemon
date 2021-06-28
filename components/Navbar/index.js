@@ -13,9 +13,9 @@ const Navbar = () => {
                 <div onClick={() => handleRedirect('/')}>
                     <img src="/pokemon-logo.png" width="75px" height="100%" />
                 </div>
-                <div className="pixeltext">
+                <div className="normaltext">
                     <Button handleClick={() => handleRedirect('/my-pokemon')}>
-                        My Pokemon
+                        <div className="normaltext">My Pokemon</div>
                     </Button>
                 </div>
             </div>

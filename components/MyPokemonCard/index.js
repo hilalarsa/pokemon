@@ -1,21 +1,47 @@
-const MyPokemonCard = ({ data }) => {
-    console.log(data)
+import { GET_IMAGE_BY_NAME } from '../../graphql/query'
+import { useQuery, gql } from '@apollo/client'
+
+import Button from '../Button'
+
+const MyPokemonCard = ({ pokemonData }) => {
+    const { data, loading, error } = useQuery(GET_IMAGE_BY_NAME, {
+        variables: { pokemonName: pokemonData.pokemonName },
+    })
+
+    if (loading) {
+        return <h2>Loading...</h2>
+    }
+
+    if (error) {
+        console.error(error)
+        return null
+    }
+
     return (
         <>
             <div className="card-container">
-                {/* <div className="pokemon-image-container">
-                    <img src={data.image} className="pokemon-image" />
-                </div> */}
-                <div className="">
-                    <div className="pokemon-name">{data.pokemonName}</div>
+                <div className="pokemon-image-container">
+                    <img
+                        src={data.pokemon.sprites.front_default}
+                        className="pokemon-image"
+                    />
                 </div>
-                <div>Owned: </div>
+                <div className="">
+                    <div className="pokemon-name">
+                        {pokemonData.pokemonName}
+                    </div>
+                </div>
                 <div>
-                    {data.owned.map((own) => {
+                    {pokemonData.owned.map((own) => {
                         return (
                             <>
-                                <div>Nickname: {own.nickname}</div>
-                                <div>Caught on: {own.dateCaught}</div>
+                                <div className="flex">
+                                    <div>
+                                        <div>Nickname: {own.nickname}</div>
+                                        <div>Caught on: {own.dateCaught}</div>
+                                    </div>
+                                    <Button>Release</Button>
+                                </div>
                             </>
                         )
                     })}
@@ -24,22 +50,12 @@ const MyPokemonCard = ({ data }) => {
             <style jsx>
                 {`
                     .card-container {
-                        cursor: pointer;
                         margin: 8px;
                         background: #ffffff;
                         border-radius: 2px;
                         border: 8px solid #9494a4;
                         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                             0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                        perspective: 1000px;
-                        transition: transform 0.2s;
-                        //animation: holoCard 15s ease infinite;
-                    }
-
-                    .card-container:hover {
-                        transform: rotateX(10deg) rotateY(20deg);
-                        color: red;
-                        background: #ffffff;
                     }
 
                     .pokemon-name {

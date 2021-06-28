@@ -26,17 +26,17 @@ const Layout = ({ children }) => {
                         rel="stylesheet"
                     />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
                         rel="stylesheet"
                     />
                 </Head>
                 <Navbar></Navbar>
                 <div className="layout-color">{children}</div>
                 <style jsx>{`
-                    .layout-color{
-                        background: #FFFFFF;
+                    .layout-color {
+                        background: #fdfffc;
                     }
-                    `}</style>
+                `}</style>
             </div>
         </>
     )

@@ -34,10 +34,12 @@ Deploy on static server
 # Design plan
 Use mobile first UI/UX
 Collor pallete : 
-f94144
-f3722c
-f8961e
-f9844a
+Orange Peel FF9F1C
+Rose Madder E71D36
+Tiffany Blue 2EC4B6
+Baby Powder FDFFFC
+Rich Black 011627
+United Nations Blue 5386E4
 
 # Stack
 React NextJS, Custom Hook, React Context

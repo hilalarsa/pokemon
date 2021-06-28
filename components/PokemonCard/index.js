@@ -15,7 +15,7 @@ const PokemonCard = ({ data }) => {
                         <img src={data.image} className="pokemon-image" />
                     </div>
                     <div className="">
-                        <div className="pokemon-name">{data.name}</div>
+                        <div className="pokemon-name normaltext">{data.name}</div>
                     </div>
                 </div>
             </Link>
@@ -24,11 +24,11 @@ const PokemonCard = ({ data }) => {
                     .card-container {
                         cursor: pointer;
                         margin: 8px;
+                        padding: 8px;
                         width: 100px;
                         height: 125px;
                         background: #FFFFFF;
-                        border-radius: 2px;
-                        border: 8px solid #9494a4;
+                        border: 4px solid #9494a4;
                         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                             0 6px 20px 0 rgba(0, 0, 0, 0.19);
                         perspective: 1000px;
@@ -45,6 +45,8 @@ const PokemonCard = ({ data }) => {
                     .pokemon-name {
                         text-transform: capitalize;
                         color: #f66a6a;
+                        font-size: .8em;
+                        font-weight: 
                     }
                     .pokemon-image-container {
                         display: flex;

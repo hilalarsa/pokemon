@@ -16,7 +16,17 @@ const getTime = () => {
 }
 
 const capitalizeFirst = (str) => {
-    return string.charAt(0).toUpperCase() + string.slice(1)
+    return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-export { getTime, capitalizeFirst }
+const randomizer = () => {
+    let randomNumber = Math.floor(Math.random() * 10) // 0-9
+    //0-4 lose, 5-9 win
+    if (randomNumber >= 5) {
+        return true
+    } else {
+        return false
+    }
+}
+
+export { getTime, capitalizeFirst, randomizer }
