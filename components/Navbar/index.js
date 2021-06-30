@@ -1,7 +1,7 @@
 import { jsx, css } from '@emotion/react'
 import { useRouter } from 'next/router'
 import Button from '../Button'
-import Image from "next/image"
+import Image from 'next/image'
 
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 
@@ -16,15 +16,19 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div onClick={() => handleRedirect('/')}>
                     {router.pathname == '/' ? (
-                        <Image
+                        <img
                             src="/pokemon-logo.png"
                             className="pointer zoomhover"
-                            width="75px"
-                            height="100%"
+                            width={75}
+                            height={'100%'}
                             alt="Logo"
                         />
                     ) : (
-                        <AiOutlineArrowLeft size={24} className="pointer" color="black"/>
+                        <AiOutlineArrowLeft
+                            size={24}
+                            className="pointer"
+                            color="black"
+                        />
                     )}
                 </div>
                 <div className="normaltext zoomhover">
@@ -40,7 +44,7 @@ const Navbar = () => {
                         justify-content: space-between;
                         align-items: center;
                         padding: 1rem;
-                        background-color: #FFCB47;
+                        background-color: #ffcb47;
                         color: white;
                         overflow: hidden;
                     }
