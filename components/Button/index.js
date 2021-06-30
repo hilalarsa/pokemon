@@ -1,23 +1,17 @@
-const Button = ({ text, handleClick, name, children }) => {
+const Button = ({ handleClick, children, disabled = false }) => {
     return (
         <>
-            <div className="button-container">
-                <div className="button-shadow">
-                    <button
-                        onClick={(e) => {
-                            if (handleClick !== undefined) handleClick(e)
-                        }}
-                        className="button"
-                    >
-                        {children}
-                    </button>
-                </div>
-            </div>
+            <button
+                onClick={(e) => {
+                    if (handleClick !== undefined && !disabled) handleClick(e)
+                }}
+                className="button"
+                disabled={disabled}
+            >
+                {children}
+            </button>
             <style jsx>{`
-                .button-container {
-                }
                 .button {
-                    transition: all 0.2s ease 0s;
                     cursor: pointer;
                     justify-content: center;
                     border: medium none;
@@ -27,12 +21,10 @@ const Button = ({ text, handleClick, name, children }) => {
                     font-size: 16px;
                     line-height: 1.5;
                     padding: 5px 20px;
-                    background: rgb(255, 242, 64) none repeat scroll 0% 0%;
+                    background-color: rgb(255, 242, 64);
                     transition: all 0.2s ease 0s;
                 }
                 .button:hover {
-                }
-                .button:active {
                     background-color: rgb(0, 0, 0);
                     color: rgb(255, 255, 255);
                 }

@@ -30,8 +30,6 @@ export default function Home({ data }) {
                     justify-content: center;
                     align-items: center;
                 }
-                .flex > * {
-                }
             `}</style>
         </div>
     )

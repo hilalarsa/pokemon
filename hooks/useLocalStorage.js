@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-function useLocalStorage(key, initialValue) {
+const useLocalStorage = (key, initialValue) => {
     // State to store our value
     // Pass initial state function to useState so logic is only executed once
     const [storedValue, setStoredValue] = useState(() => {
         try {
             // Get from local storage by key
-            const item = localStorage.getItem(key)
+            const item = window.localStorage.getItem(key)
+            console.log('item')
+            console.log(JSON.parse(item))
             // Parse stored json or if none return initialValue
             return item ? JSON.parse(item) : initialValue
         } catch (error) {
@@ -15,23 +17,36 @@ function useLocalStorage(key, initialValue) {
             return initialValue
         }
     })
-    // Return a wrapped version of useState's setter function that ...
-    // ... persists the new value to localStorage.
-    const setValue = (value) => {
+
+    useEffect(() => {
+        console.log(storedValue)
+        console.log('setItem1')
         try {
-            // Allow value to be a function so we have same API as useState
-            const valueToStore =
-                value instanceof Function ? value(storedValue) : value
-            // Save state
-            setStoredValue(valueToStore)
             // Save to local storage
-            localStorage.setItem(key, JSON.stringify(valueToStore))
+            console.log('setItem2')
+            console.log(key)
+            console.log(storedValue)
+            window.localStorage.setItem(key, JSON.stringify(storedValue))
         } catch (error) {
             // A more advanced implementation would handle the error case
             console.log(error)
         }
-    }
-    return [storedValue, setValue]
+    }, [key, storedValue])
+
+    return [storedValue, setStoredValue]
 }
 
 export { useLocalStorage }
+
+// localStorage.setItem(
+//     key,
+//     JSON.stringify(storedValue, function (key, val) {
+//         if (val != null && typeof val == 'object') {
+//             if (seen.indexOf(val) >= 0) {
+//                 return
+//             }
+//             seen.push(val)
+//         }
+//         return val
+//     })
+// )

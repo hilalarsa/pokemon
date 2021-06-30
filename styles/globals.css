@@ -16,12 +16,21 @@ a {
     box-sizing: border-box;
 }
 /* css global utilities */
-.flex{
+.flex {
     display: flex;
 }
-.center{
+.center {
     justify-content: center;
     align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.justify-start {
+    justify-content: start;
+}
+.justify-between {
+    justify-content: space-between;
 }
 /* end css global utilities */
 
@@ -30,4 +39,26 @@ a {
 }
 .normaltext {
     font-family: 'Poppins';
+}
+
+
+.pills {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 4px 6px;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+.bar {
+    background-color: #ff9f1c;
+    border-radius: 25%;
+    width: 20px;
+    height: 10px;
+    margin: 2px;
 }

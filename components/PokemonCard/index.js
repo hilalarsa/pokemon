@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import LoadableImage from "../LoadableImage"
 
 const PokemonCard = ({ data }) => {
-    console.log(data)
     return (
         <>
             <Link
@@ -12,7 +13,7 @@ const PokemonCard = ({ data }) => {
             >
                 <div className="card-container">
                     <div className="pokemon-image-container">
-                        <img src={data.image} className="pokemon-image" />
+                        <LoadableImage src={data.image} width="75px" height="75px"/>
                     </div>
                     <div className="">
                         <div className="pokemon-name normaltext">{data.name}</div>
@@ -29,35 +30,35 @@ const PokemonCard = ({ data }) => {
                         height: 125px;
                         background: #FFFFFF;
                         border: 4px solid #9494a4;
-                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                        perspective: 1000px;
+                        border-radius: 10%;
+                        box-shadow: 5px 8px #011627;
                         transition: transform 0.2s;
+                        color: #f66a6a;
                         //animation: holoCard 15s ease infinite;
                     }
 
                     .card-container:hover {
-                        transform: rotateX(10deg) rotateY(20deg);
-                        color: red;
-                        background: #ffffff;
+                        transform: rotateX(10deg) rotateY(10deg);
+                        background: #FF9F1C;
+                        color: #FFFFFF;
+                    }
+
+                    .card-container:active {
+                        transform: rotateX(10deg) rotateY(10deg);
+                        background: #E71D36;
+                        color: #FFFFFF;
                     }
 
                     .pokemon-name {
                         text-transform: capitalize;
-                        color: #f66a6a;
                         font-size: .8em;
-                        font-weight: 
+                        font-weight: 500;
                     }
                     .pokemon-image-container {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                    }
-                    .pokemon-image {
-                        height: 100%;
-                        width: 100%;
-                        max-width: 75px;
-                        max-height: 75px;
+                        height: 80%;
                     }
 
                     .pokemon-stats,
