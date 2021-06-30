@@ -10,19 +10,20 @@ const Navbar = () => {
     const handleRedirect = (href) => {
         router.push(href)
     }
-    console.log(router)
     return (
         <>
             <div className="navbar-container">
                 <div onClick={() => handleRedirect('/')}>
                     {router.pathname == '/' ? (
-                        <img
-                            src="/pokemon-logo.png"
-                            className="pointer zoomhover"
-                            width={75}
-                            height={'100%'}
-                            alt="Logo"
-                        />
+                        <div className="image-container pointer zoomhover">
+                            <Image
+                                src="/pokemon-logo.png"
+                                width={75}
+                                height={25}
+                                alt="Logo"
+                                quality={25}
+                            />
+                        </div>
                     ) : (
                         <AiOutlineArrowLeft
                             size={24}
@@ -47,6 +48,10 @@ const Navbar = () => {
                         background-color: #ffcb47;
                         color: white;
                         overflow: hidden;
+                    }
+                    .image-container {
+                        width: 75px;
+                        height: 100%;
                     }
                 `}
             </style>

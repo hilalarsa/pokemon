@@ -1,7 +1,7 @@
 import { GET_IMAGE_BY_NAME } from '../../graphql/query'
 import { useQuery, gql } from '@apollo/client'
 
-import Image from "next/image"
+import Image from 'next/image'
 
 import Accordion from '../Accordion'
 import Button from '../Button'
@@ -73,6 +73,8 @@ const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
                                 <Image
                                     src={data.pokemon.sprites.front_default}
                                     className="pokemon-image"
+                                    width={175}
+                                    height={175}
                                     alt="My Pokemon Detail"
                                 />
                             </div>
@@ -92,17 +94,17 @@ const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
                                                         Caught on:{' '}
                                                         {own.dateCaught}
                                                     </div>
+                                                    <Button
+                                                        handleClick={() =>
+                                                            releasePokemon(
+                                                                pokemonData.pokemonName,
+                                                                own.nickname
+                                                            )
+                                                        }
+                                                    >
+                                                        Release
+                                                    </Button>
                                                 </div>
-                                                <Button
-                                                    handleClick={() =>
-                                                        releasePokemon(
-                                                            pokemonData.pokemonName,
-                                                            own.nickname
-                                                        )
-                                                    }
-                                                >
-                                                    Release
-                                                </Button>
                                             </div>
                                         </>
                                     )
@@ -168,7 +170,8 @@ const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
                                 color: white;
                             }
                             .nickname-info {
-                                justify-content: space-between;
+                                justify-content: center;
+                                text-align: center;
                                 margin: 6px 0;
                             }
 

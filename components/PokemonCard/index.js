@@ -2,7 +2,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import LoadableImage from '../LoadableImage'
 
-const PokemonCard = ({ data }) => {
+const PokemonCard = ({ data, ownedData }) => {
+    let amountOwned =
+        ownedData && ownedData.length > 0 ? ownedData[0].owned.length : ''
     return (
         <>
             <Link
@@ -24,6 +26,7 @@ const PokemonCard = ({ data }) => {
                     <div className="">
                         <div className="pokemon-name normaltext">
                             {data.name}
+                            <div className="owned-amount">{amountOwned}</div>
                         </div>
                     </div>
                 </div>
@@ -33,6 +36,7 @@ const PokemonCard = ({ data }) => {
                     .card-container {
                         cursor: pointer;
                         margin: 4px;
+                        margin-bottom: 12px;
                         padding: 8px;
                         width: 100px;
                         height: 125px;
@@ -55,6 +59,7 @@ const PokemonCard = ({ data }) => {
                         text-transform: capitalize;
                         font-size: 0.8em;
                         font-weight: 500;
+                        text-align: center;
                     }
                     .pokemon-image-container {
                         display: flex;
@@ -62,15 +67,10 @@ const PokemonCard = ({ data }) => {
                         align-items: center;
                         height: 80%;
                     }
-
-                    .pokemon-stats,
-                    .pokemon-name {
-                        text-align: center;
-                    }
-
-                    .pokemon-stats {
-                        font-size: 1.8rem;
-                        color: #ffffff;
+                    .owned-amount {
+                        background-color: red;
+                        border-radius: 10px;
+                        color: white;
                     }
                 `}
             </style>

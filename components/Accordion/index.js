@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai'
 
 const Accordion = ({ headerText, children, ownedAmount }) => {
-    const [expanded, setExpanded] = useState(true)
+    const [expanded, setExpanded] = useState(false)
 
     return (
         <>
@@ -25,10 +25,10 @@ const Accordion = ({ headerText, children, ownedAmount }) => {
             <div className="">{expanded && children}</div>
             <style jsx>{`
                 .accordion-container{
-                    padding: 12px;
+                    padding: 6px;
                     cursor: pointer;
                     background-color: white;
-                    border-radius: 10px;
+                    border-radius: 2px;
                 }
                 .accordion-button{
                     background: transparent;
@@ -37,6 +37,7 @@ const Accordion = ({ headerText, children, ownedAmount }) => {
                     border: medium none;
                 }
                 .header-text{
+                    font-size: 12px;
                     color: black;
                     flex-grow: 1;
                     justify-content: space-between;

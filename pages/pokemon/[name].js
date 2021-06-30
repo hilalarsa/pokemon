@@ -10,7 +10,7 @@ import Layout from '../../components/Layout'
 import Button from '../../components/Button'
 import Loading from '../../components/Loading'
 import LoadableImage from '../../components/LoadableImage'
-import Image from "next/image"
+import Image from 'next/image'
 
 const PokemonDetails = ({ data }) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -36,7 +36,14 @@ const PokemonDetails = ({ data }) => {
             }
         }
         return () => clearInterval(interval)
-    }, [countdown, isLoading])
+    }, [
+        countdown,
+        isLoading,
+        isPokemonCaught,
+        owned,
+        nickname,
+        buttonCatchText,
+    ])
 
     const handleClick = () => {
         console.log('catching pokemon~')
@@ -103,6 +110,7 @@ const PokemonDetails = ({ data }) => {
                     }, 1000)
                     //TODO: add validation on modal
                 } else {
+                    console.log('nickname saved')
                     ownedPokemon[currentIndex].owned.push(pokemonData)
                     finishSavingPokemon(ownedPokemon)
                 }
@@ -132,9 +140,15 @@ const PokemonDetails = ({ data }) => {
     }
 
     const finishSavingPokemon = (ownedPokemon) => {
+        console.log('finish!')
+        console.log(ownedPokemon)
         setButtonCatchText('save success')
         setTimeout(() => {
-            setOwned(ownedPokemon)
+            setOwned((prevState) => {
+                console.log(prevState)
+                console.log(ownedPokemon)
+                return [...ownedPokemon]
+            })
             setCountdown(3)
             setPokemonCaught(false)
             setButtonCatchText('catch this pokemon')
@@ -194,7 +208,7 @@ const PokemonDetails = ({ data }) => {
                         <Button handleClick={() => handleClick(pokemon.name)}>
                             <div
                                 className="fab-button-content"
-                                style={{ color: 'red' }}
+                                style={{ color: 'orange' }}
                             >
                                 {buttonCatchText}
                             </div>
@@ -260,7 +274,10 @@ const PokemonDetails = ({ data }) => {
                                                     )
                                                 ),
                                             ].map((e, i) => (
-                                                <div key={i} className="bar"></div>
+                                                <div
+                                                    key={i}
+                                                    className="bar"
+                                                ></div>
                                             ))}
                                         </div>
                                     </div>
@@ -323,12 +340,14 @@ const PokemonDetails = ({ data }) => {
                         color: #ffffff;
                     }
                     .pokemon-name {
+                        color: #5386e4;
                         position: relative;
                         text-align: center;
                         top: -24px;
-                        color: #5386e4;
                         font-size: 1.2rem;
-                        padding: ;
+                    }
+                    .pokemon-name:active {
+                        color: white;
                     }
                     .catch-button {
                         text-align: center;
