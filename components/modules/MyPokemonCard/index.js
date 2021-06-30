@@ -1,10 +1,10 @@
-import { GET_IMAGE_BY_NAME } from '../../graphql/query'
+import { GET_IMAGE_BY_NAME } from '../../../graphql/query'
 import { useQuery, gql } from '@apollo/client'
 
 import Image from 'next/image'
 
-import Accordion from '../Accordion'
-import Button from '../Button'
+import Accordion from '../../elements/Accordion'
+import Button from '../../elements/Button'
 
 const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
     const { data, loading, error } = useQuery(GET_IMAGE_BY_NAME, {

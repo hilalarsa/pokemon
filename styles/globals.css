@@ -81,6 +81,30 @@ a {
     height: 10px;
     margin: 2px;
 }
+.column {
+    flex: 50%;
+}
+.info-border {
+    display: flex;
+    align-items: start;
+    margin: 0 24px;
+    padding: 24px;
+    border: 2px solid #fdfffc;
+    border-radius: 2%;
+}
+.info-margin {
+    margin-top: 36px;
+}
+.info-text {
+    position: relative;
+    top: 12px;
+    background-color: #2ec4b6;
+    width: 40%;
+}
+.high-level {
+    background-color: gold;
+    color: #e71d36;
+}
 
 .pulse {
     animation: pulse 1s infinite;

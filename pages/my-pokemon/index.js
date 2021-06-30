@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-import Layout from '../../components/Layout'
-import MyPokemonCard from '../../components/MyPokemonCard'
+import Layout from '../../components/elements/Layout'
+import MyPokemonCard from '../../components/modules/MyPokemonCard'
 
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 

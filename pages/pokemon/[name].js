@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-
+import Image from 'next/image'
 import client from '../../apollo-client'
+
 import { GET_POKEMONS, GET_POKEMONS_BY_ID } from '../../graphql/query'
 import { getTime, capitalizeFirst, randomizer } from '../../utils/helper'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 
-import Layout from '../../components/Layout'
-import Button from '../../components/Button'
-import Loading from '../../components/Loading'
-import LoadableImage from '../../components/LoadableImage'
-import Image from 'next/image'
+import Layout from '../../components/elements/Layout'
+import Button from '../../components/elements/Button'
+import Loading from '../../components/elements/Loading'
+import LoadableImage from '../../components/elements/LoadableImage'
+
+import PokemonInfo from '../../components/modules/PokemonInfo'
+import PokemonMoves from '../../components/modules/PokemonMoves'
+import PokemonStats from '../../components/modules/PokemonStats'
 
 const PokemonDetails = ({ data }) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -222,70 +226,10 @@ const PokemonDetails = ({ data }) => {
                         </div>
                     )}
                 </div>
-                <div className="info-container normaltext zoomhover">
-                    <div className="info-text text-center info-margin">
-                        Pokemon Info
-                    </div>
-                    <div className="info-border">
-                        <div className="column">
-                            <div>Base EXP</div>
-                            <div>Height</div>
-                            <div>Weight</div>
-                            <div>Ability</div>
-                        </div>
-                        <div className="column">
-                            <div>{pokemon.base_experience}</div>
-                            <div>{pokemon.height}</div>
-                            <div>{pokemon.weight}</div>
-                            <div>
-                                {pokemon.abilities.map((item, key) => (
-                                    <div key={key} className="pills">
-                                        {capitalizeFirst(item.ability.name)}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div
-                    className="info-container normaltext zoomhover"
-                    style={{ paddingBottom: '48px' }}
-                >
-                    <div className="info-text text-center">Base Stats</div>
-                    <div className="info-border">
-                        <div className="column">
-                            {pokemon.stats.map((item, key) => {
-                                return (
-                                    <div key={key} className="flex center">
-                                        <div
-                                            className="column"
-                                            style={{ marginRight: '12px' }}
-                                        >
-                                            {capitalizeFirst(item.stat.name)}
-                                        </div>
-                                        <div className="flex column">
-                                            {[
-                                                ...Array(
-                                                    Math.floor(
-                                                        parseInt(
-                                                            item.base_stat
-                                                        ) / 20
-                                                    )
-                                                ),
-                                            ].map((e, i) => (
-                                                <div
-                                                    key={i}
-                                                    className="bar"
-                                                ></div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
+                <PokemonInfo pokemon={pokemon} />
+                <PokemonMoves pokemon={pokemon} />
+                <PokemonStats pokemon={pokemon} />
 
                 <style jsx>{`
                     .container {
@@ -294,15 +238,8 @@ const PokemonDetails = ({ data }) => {
                         justify-content: center;
                         align-items: center;
                     }
-                    .row {
-                        display: flex;
-                    }
-
                     .column {
                         flex: 50%;
-                    }
-                    .info-container {
-                        color: white;
                     }
                     .info-border {
                         display: flex;
@@ -379,6 +316,7 @@ const PokemonDetails = ({ data }) => {
                         color: currentColor;
                         border-radius: var(--size-radius);
                     }
+
                 `}</style>
             </Layout>
         </>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import LoadableImage from '../LoadableImage'
+import LoadableImage from '../../elements/LoadableImage'
 
 const PokemonCard = ({ data, ownedData }) => {
     let amountOwned =

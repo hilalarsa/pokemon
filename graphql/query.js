@@ -21,10 +21,12 @@ const GET_POKEMONS_BY_ID = gql`
                     name
                 }
             }
-            abilities {
-                is_hidden
-                ability {
+            moves {
+                move {
                     name
+                }
+                version_group_details {
+                    level_learned_at
                 }
             }
             stats {

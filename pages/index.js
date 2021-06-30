@@ -4,8 +4,8 @@ import client from '../apollo-client'
 import { GET_POKEMONS } from '../graphql/query'
 import { useEffect, useState } from 'react'
 
-import Layout from '../components/Layout'
-import PokemonCard from '../components/PokemonCard'
+import Layout from '../components/elements/Layout'
+import PokemonCard from '../components/modules/PokemonCard'
 
 import { useQuery, gql } from '@apollo/client'
 import { useLocalStorage } from '../hooks/useLocalStorage'
