@@ -10,6 +10,7 @@ import Layout from '../../components/Layout'
 import Button from '../../components/Button'
 import Loading from '../../components/Loading'
 import LoadableImage from '../../components/LoadableImage'
+import Image from "next/image"
 
 const PokemonDetails = ({ data }) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -150,10 +151,11 @@ const PokemonDetails = ({ data }) => {
                                 isLoading ? 'pulse' : ''
                             }`}
                         >
-                            <img
+                            <Image
                                 src={pokemon.sprites.front_default}
                                 width={250}
                                 height={250}
+                                alt="Detail Pokemon"
                             />
                         </div>
                         <div className="pokemon-name pixeltext">
@@ -222,8 +224,8 @@ const PokemonDetails = ({ data }) => {
                             <div>{pokemon.height}</div>
                             <div>{pokemon.weight}</div>
                             <div>
-                                {pokemon.abilities.map((item) => (
-                                    <div className="pills">
+                                {pokemon.abilities.map((item, key) => (
+                                    <div key={key} className="pills">
                                         {capitalizeFirst(item.ability.name)}
                                     </div>
                                 ))}
@@ -239,9 +241,9 @@ const PokemonDetails = ({ data }) => {
                     <div className="info-text text-center">Base Stats</div>
                     <div className="info-border">
                         <div className="column">
-                            {pokemon.stats.map((item) => {
+                            {pokemon.stats.map((item, key) => {
                                 return (
-                                    <div className="flex center">
+                                    <div key={key} className="flex center">
                                         <div
                                             className="column"
                                             style={{ marginRight: '12px' }}
@@ -258,7 +260,7 @@ const PokemonDetails = ({ data }) => {
                                                     )
                                                 ),
                                             ].map((e, i) => (
-                                                <div className="bar"></div>
+                                                <div key={i} className="bar"></div>
                                             ))}
                                         </div>
                                     </div>

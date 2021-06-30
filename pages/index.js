@@ -18,8 +18,8 @@ export default function Home({ data }) {
         <div>
             <Layout>
                 <div className="card-container">
-                    {data.pokemons.results.map((item) => {
-                        return <PokemonCard data={item} />
+                    {data.pokemons.results.map((item, key) => {
+                        return <PokemonCard key={key} data={item} />
                     })}
                 </div>
             </Layout>

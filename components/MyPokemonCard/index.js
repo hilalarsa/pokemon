@@ -1,6 +1,8 @@
 import { GET_IMAGE_BY_NAME } from '../../graphql/query'
 import { useQuery, gql } from '@apollo/client'
 
+import Image from "next/image"
+
 import Accordion from '../Accordion'
 import Button from '../Button'
 
@@ -68,9 +70,10 @@ const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
                             ownedAmount={pokemonData.owned.length}
                         >
                             <div className="pokemon-image-container">
-                                <img
+                                <Image
                                     src={data.pokemon.sprites.front_default}
                                     className="pokemon-image"
+                                    alt="My Pokemon Detail"
                                 />
                             </div>
                             <div className="pokemon-name pixeltext">
