@@ -1,6 +1,7 @@
 import { GET_IMAGE_BY_NAME } from '../../graphql/query'
 import { useQuery, gql } from '@apollo/client'
 
+import Accordion from '../Accordion'
 import Button from '../Button'
 
 const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
@@ -43,7 +44,6 @@ const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
                         ].owned.findIndex(
                             (item) => item.nickname == releasedPokemonNickname
                         )
-                        console.log(currentNicknameIndex)
                         ownedPokemon[currentIndex].owned.splice(
                             currentNicknameIndex,
                             1
@@ -63,89 +63,110 @@ const MyPokemonCard = ({ pokemonData, owned, setOwned }) => {
             return (
                 <>
                     <div className="card-container">
-                        <div className="pokemon-image-container">
-                            <img
-                                src={data.pokemon.sprites.front_default}
-                                className="pokemon-image"
-                            />
-                        </div>
-                        <div className="">
-                            <div className="pokemon-name">
+                        <Accordion
+                            headerText={pokemonData.pokemonName}
+                            ownedAmount={pokemonData.owned.length}
+                        >
+                            <div className="pokemon-image-container">
+                                <img
+                                    src={data.pokemon.sprites.front_default}
+                                    className="pokemon-image"
+                                />
+                            </div>
+                            <div className="pokemon-name pixeltext">
                                 {pokemonData.pokemonName}
                             </div>
-                        </div>
-                        <div>
-                            {pokemonData.owned.map((own) => {
-                                return (
-                                    <>
-                                        <div className="flex">
-                                            <div>
+                            <div className="nickname-container normaltext">
+                                {pokemonData.owned.map((own) => {
+                                    return (
+                                        <>
+                                            <div className="flex nickname-info">
                                                 <div>
-                                                    Nickname: {own.nickname}
+                                                    <div>
+                                                        Nickname: {own.nickname}
+                                                    </div>
+                                                    <div>
+                                                        Caught on:{' '}
+                                                        {own.dateCaught}
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    Caught on: {own.dateCaught}
-                                                </div>
+                                                <Button
+                                                    handleClick={() =>
+                                                        releasePokemon(
+                                                            pokemonData.pokemonName,
+                                                            own.nickname
+                                                        )
+                                                    }
+                                                >
+                                                    Release
+                                                </Button>
                                             </div>
-                                            <Button
-                                                handleClick={() =>
-                                                    releasePokemon(
-                                                        pokemonData.pokemonName,
-                                                        own.nickname
-                                                    )
-                                                }
-                                            >
-                                                Release
-                                            </Button>
-
-                                            <button
-                                                onClick={() => {
-                                                    setOwned([])
-                                                }}
-                                            >
-                                                Empty
-                                            </button>
-                                        </div>
-                                    </>
-                                )
-                            })}
-                        </div>
+                                        </>
+                                    )
+                                })}
+                            </div>
+                        </Accordion>
                     </div>
                     <style jsx>
                         {`
                             .card-container {
-                                margin: 8px;
-                                background: #ffffff;
-                                border-radius: 2px;
-                                border: 8px solid #9494a4;
-                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                display: flex;
+                                flex-direction: column;
+                                color: white;
+                                border: 2px solid #fdfffc;
+                                border-radius: 10px;
+                                margin-bottom: 12px;
                             }
 
-                            .pokemon-name {
-                                text-transform: capitalize;
-                                color: #f66a6a;
-                            }
                             .pokemon-image-container {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+                                border-radius: 2px;
+                                margin: 24px;
+                            }
+                            .pokemon-image-container > * {
+                                background-color: #fdfffc;
                             }
                             .pokemon-image {
                                 height: 100%;
                                 width: 100%;
-                                max-width: 75px;
-                                max-height: 75px;
+                                max-width: 175px;
+                                max-height: 175px;
+                                border-radius: 3%;
                             }
 
-                            .pokemon-stats,
-                            .pokemon-name {
-                                text-align: center;
-                            }
-
-                            .pokemon-stats {
-                                font-size: 1.8rem;
+                            .pokemon-image:hover {
+                                transform: rotateX(10deg) rotateY(10deg);
+                                background-color: #ff9f1c;
                                 color: #ffffff;
+                                animation: pulse 1s infinite;
+                            }
+
+                            .pokemon-name {
+                                text-transform: capitalize;
+                                color: #5386e4;
+                                justify-content: space-around;
+                                text-align: center;
+                                font-size: 16px;
+                                margin: 12px;
+                                margin-top: -48px;
+                            }
+
+                            .nickname-container {
+                                display: flex;
+                                flex-direction: column;
+                                margin: 0 24px;
+                                padding: 12px;
+                                border-top: 2px solid #fdfffc;
+                                border-bottom: 2px solid #fdfffc;
+                                border-radius: 2%;
+                                margin-bottom: 24px;
+                                color: white;
+                            }
+                            .nickname-info {
+                                justify-content: space-between;
+                                margin: 6px 0;
                             }
 
                             @keyframes holoFlip {

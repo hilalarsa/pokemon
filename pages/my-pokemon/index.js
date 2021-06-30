@@ -31,8 +31,25 @@ const MyPokemon = () => {
                             )
                     })
                 ) : (
-                    <div>Pokedex is empty</div>
+                    <div className="empty">
+                        <div className="normaltext">Pokedex is empty</div>
+                    </div>
                 )}
+                <style jsx>
+                    {`
+                        .empty {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 24px;
+                            padding-top: 24px;
+                            color: white;
+                            margin: 24px;
+                            padding: 48px;
+                            border: 2px solid #fdfffc;
+                        }
+                    `}
+                </style>
             </Layout>
         </>
     )

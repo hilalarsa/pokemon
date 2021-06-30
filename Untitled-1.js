@@ -1,0 +1,1 @@
+[{"pokemonName":"bulbasaur","owned":[{"nickname":"qq","dateCaught":"xx"},{"nickname":"ww","dateCaught":"xx"},{"nickname":"ee","dateCaught":"xx"}]}]

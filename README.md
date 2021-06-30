@@ -41,6 +41,7 @@ Baby Powder FDFFFC
 Rich Black 011627
 United Nations Blue 5386E4
 
+
 # Stack
 React NextJS, Custom Hook, React Context
 Graphql Apollo Client
@@ -76,15 +77,20 @@ Start on writing test cases
 Initial Deploy
 
 # Day 5
-Write test
 Improve UI
 Add animation
 
 # Day 6
-Write more test
 Improve UI
 Clean code
+Add animation
 
 # Day 7
 Clean code
 Double check deployment and submit
+
+
+
+TODO : 
+- Write tests
+- 

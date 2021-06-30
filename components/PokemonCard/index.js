@@ -11,9 +11,9 @@ const PokemonCard = ({ data }) => {
                     query: { slug: data.name },
                 }}
             >
-                <div className="card-container">
+                <div className="card-container zoomhover">
                     <div className="pokemon-image-container">
-                        <LoadableImage src={data.image} width="75px" height="75px"/>
+                        <img src={data.image} width="75px" height="75px"/>
                     </div>
                     <div className="">
                         <div className="pokemon-name normaltext">{data.name}</div>
@@ -24,24 +24,19 @@ const PokemonCard = ({ data }) => {
                 {`
                     .card-container {
                         cursor: pointer;
-                        margin: 8px;
+                        margin: 4px;
                         padding: 8px;
                         width: 100px;
                         height: 125px;
                         background: #FFFFFF;
-                        border: 4px solid #9494a4;
+                        border: 4px solid #FDFFFC;
                         border-radius: 10%;
-                        box-shadow: 5px 8px #011627;
+                        box-shadow: 5px 5px rgba(255,255,255,0.5);
                         transition: transform 0.2s;
                         color: #f66a6a;
                         //animation: holoCard 15s ease infinite;
                     }
 
-                    .card-container:hover {
-                        transform: rotateX(10deg) rotateY(10deg);
-                        background: #FF9F1C;
-                        color: #FFFFFF;
-                    }
 
                     .card-container:active {
                         transform: rotateX(10deg) rotateY(10deg);
@@ -69,30 +64,6 @@ const PokemonCard = ({ data }) => {
                     .pokemon-stats {
                         font-size: 1.8rem;
                         color: #ffffff;
-                    }
-
-                    @keyframes holoFlip {
-                        from: {
-                            transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
-                        }
-                        to: {
-                            transform: rotateZ(10deg) rotateX(10deg)
-                                rotateY(10deg);
-                        }
-                    }
-                    @keyframes holoCard {
-                        0%,
-                        100% {
-                            transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
-                        }
-                        33% {
-                            transform: rotateZ(-10deg) rotateX(20deg)
-                                rotateY(-12deg);
-                        }
-                        66% {
-                            transform: rotateZ(10deg) rotateX(-20deg)
-                                rotateY(12deg);
-                        }
                     }
                 `}
             </style>

@@ -15,6 +15,7 @@ const PokemonDetails = ({ data }) => {
     const [isLoading, setIsLoading] = useState(false)
     const [countdown, setCountdown] = useState(3)
     const [isPokemonCaught, setPokemonCaught] = useState(false)
+    // const [buttonState, setButtonState] = useState("initial") // initial, catching, success, failed, nickname, save, duplicate
     const [buttonCatchText, setButtonCatchText] = useState('catch this pokemon')
     const [nickname, setNickname] = useState('')
     const [owned, setOwned] = useLocalStorage('owned', '')
@@ -130,7 +131,6 @@ const PokemonDetails = ({ data }) => {
     }
 
     const finishSavingPokemon = (ownedPokemon) => {
-        console.log(ownedPokemon)
         setButtonCatchText('save success')
         setTimeout(() => {
             setOwned(ownedPokemon)
@@ -144,12 +144,16 @@ const PokemonDetails = ({ data }) => {
         <>
             <Layout>
                 <div className="container">
-                    <div className="image-container">
-                        <div className="image-container-load">
-                            <LoadableImage
+                    <div className="image-container zoomhover pointer">
+                        <div
+                            className={`image-container-load ${
+                                isLoading ? 'pulse' : ''
+                            }`}
+                        >
+                            <img
+                                src={pokemon.sprites.front_default}
                                 width={250}
                                 height={250}
-                                src={pokemon.sprites.front_default}
                             />
                         </div>
                         <div className="pokemon-name pixeltext">
@@ -202,8 +206,10 @@ const PokemonDetails = ({ data }) => {
                         </div>
                     )}
                 </div>
-                <div className="info-container normaltext">
-                    <div className="info-text text-center">Pokemon Info</div>
+                <div className="info-container normaltext zoomhover">
+                    <div className="info-text text-center info-margin">
+                        Pokemon Info
+                    </div>
                     <div className="info-border">
                         <div className="column">
                             <div>Base EXP</div>
@@ -227,7 +233,7 @@ const PokemonDetails = ({ data }) => {
                 </div>
 
                 <div
-                    className="info-container normaltext"
+                    className="info-container normaltext zoomhover"
                     style={{ paddingBottom: '48px' }}
                 >
                     <div className="info-text text-center">Base Stats</div>
@@ -268,7 +274,6 @@ const PokemonDetails = ({ data }) => {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        background-color: #2ec4b6;
                     }
                     .row {
                         display: flex;
@@ -278,7 +283,6 @@ const PokemonDetails = ({ data }) => {
                         flex: 50%;
                     }
                     .info-container {
-                        background-color: #2ec4b6;
                         color: white;
                     }
                     .info-border {
@@ -288,6 +292,9 @@ const PokemonDetails = ({ data }) => {
                         padding: 24px;
                         border: 2px solid #fdfffc;
                         border-radius: 2%;
+                    }
+                    .info-margin {
+                        margin-top: 36px;
                     }
                     .info-text {
                         position: relative;
@@ -302,14 +309,16 @@ const PokemonDetails = ({ data }) => {
                         border-radius: 10%;
                         margin-top: 12px;
                     }
-                    .pokemon-stats {
-                    }
                     .image-container-load {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         width: 250px;
                         height: 250px;
+                    }
+                    .image-container:active {
+                        background: #e71d36;
+                        color: #ffffff;
                     }
                     .pokemon-name {
                         position: relative;

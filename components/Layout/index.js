@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
                 <div className="layout-color">{children}</div>
                 <style jsx>{`
                     .layout-color {
-                        background: #fdfffc;
+                        padding: 12px;
                     }
                 `}</style>
             </div>

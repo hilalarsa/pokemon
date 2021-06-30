@@ -5,7 +5,7 @@ const Button = ({ handleClick, children, disabled = false }) => {
                 onClick={(e) => {
                     if (handleClick !== undefined && !disabled) handleClick(e)
                 }}
-                className="button"
+                className="button normaltext zoomhover"
                 disabled={disabled}
             >
                 {children}
@@ -23,10 +23,7 @@ const Button = ({ handleClick, children, disabled = false }) => {
                     padding: 5px 20px;
                     background-color: rgb(255, 242, 64);
                     transition: all 0.2s ease 0s;
-                }
-                .button:hover {
-                    background-color: rgb(0, 0, 0);
-                    color: rgb(255, 255, 255);
+                    border-radius: 2%;
                 }
             `}</style>
         </>
