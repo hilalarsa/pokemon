@@ -85,61 +85,69 @@ const PokemonDetails = ({ data }) => {
             nickname,
             dateCaught: getTime(),
         }
-
-        //TODO:
-        //show modal catching pokemon
-        //start saving logic
-        if (ownedPokemon != '' && ownedPokemon !== null) {
-            if (
-                ownedPokemon.find(
-                    (item) => item.pokemonName == currentPokemonName
-                )
-            ) {
-                //pokemon already exist, push nickname to owned tree
-                let currentIndex = ownedPokemon.findIndex(
-                    (item) => item.pokemonName == currentPokemonName
-                )
-                // pokemon has duplicate nickname
+        // validate if nickname empty
+        if (nickname == '') {
+            console.log('fill something first')
+            setButtonCatchText('Try again')
+            setTimeout(() => {
+                setButtonCatchText('Add nickname')
+            }, 1000)
+        } else {
+            //TODO:
+            //show modal catching pokemon
+            //start saving logic
+            if (ownedPokemon != '' && ownedPokemon !== null) {
                 if (
-                    ownedPokemon[currentIndex].owned.find(
-                        (item) => item.nickname == nickname
+                    ownedPokemon.find(
+                        (item) => item.pokemonName == currentPokemonName
                     )
                 ) {
-                    console.log(
-                        'same pokemon with same nickname exist, assign different name'
+                    //pokemon already exist, push nickname to owned tree
+                    let currentIndex = ownedPokemon.findIndex(
+                        (item) => item.pokemonName == currentPokemonName
                     )
-                    setButtonCatchText('duplicate nickname')
-                    setTimeout(() => {
-                        setButtonCatchText('Add nickname')
-                    }, 1000)
-                    //TODO: add validation on modal
+                    // pokemon has duplicate nickname
+                    if (
+                        ownedPokemon[currentIndex].owned.find(
+                            (item) => item.nickname == nickname
+                        )
+                    ) {
+                        console.log(
+                            'same pokemon with same nickname exist, assign different name'
+                        )
+                        setButtonCatchText('duplicate nickname')
+                        setTimeout(() => {
+                            setButtonCatchText('Add nickname')
+                        }, 1000)
+                        //TODO: add validation on modal
+                    } else {
+                        console.log('nickname saved')
+                        ownedPokemon[currentIndex].owned.push(pokemonData)
+                        finishSavingPokemon(ownedPokemon)
+                    }
                 } else {
-                    console.log('nickname saved')
-                    ownedPokemon[currentIndex].owned.push(pokemonData)
+                    //new pokemon, push whole object to owned tree
+                    ownedPokemon = [
+                        ...ownedPokemon,
+                        {
+                            pokemonName: currentPokemonName,
+                            owned: [pokemonData],
+                        },
+                    ]
+                    console.log('new pokemon caught')
                     finishSavingPokemon(ownedPokemon)
                 }
             } else {
-                //new pokemon, push whole object to owned tree
+                //new pokemon, owned tree is empty
                 ownedPokemon = [
-                    ...ownedPokemon,
                     {
                         pokemonName: currentPokemonName,
                         owned: [pokemonData],
                     },
                 ]
-                console.log('new pokemon caught')
+                console.log('initial caught')
                 finishSavingPokemon(ownedPokemon)
             }
-        } else {
-            //new pokemon, owned tree is empty
-            ownedPokemon = [
-                {
-                    pokemonName: currentPokemonName,
-                    owned: [pokemonData],
-                },
-            ]
-            console.log('initial caught')
-            finishSavingPokemon(ownedPokemon)
         }
     }
 
@@ -316,7 +324,6 @@ const PokemonDetails = ({ data }) => {
                         color: currentColor;
                         border-radius: var(--size-radius);
                     }
-
                 `}</style>
             </Layout>
         </>

@@ -18,8 +18,8 @@ const capitalizeFirst = (str) => {
 const randomizer = () => {
     let randomNumber = Math.floor(Math.random() * 10) // 0-9
     //0-4 lose, 5-9 win
-    // if (randomNumber >= 5) {
-    if (randomNumber >= 0) {
+    if (randomNumber >= 5) {
+    // if (randomNumber >= 0) { // enable to use masterball, ALWAYS CATCH'EM!!! lol
         return true
     } else {
         return false
